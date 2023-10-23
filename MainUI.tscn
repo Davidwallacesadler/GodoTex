@@ -1,0 +1,236 @@
+[gd_scene load_steps=2 format=3 uid="uid://3wbjem6eeiex"]
+
+[ext_resource type="FontFile" uid="uid://b033ll5eisqa4" path="res://Assets/TacticalEspionageAction.ttf" id="1_0m8r1"]
+
+[node name="MainUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ItemList2" type="ItemList" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+item_count = 1
+item_0/text = "Credit Card"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer2/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "▲"
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer2/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "▼"
+
+[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer2/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "USE"
+
+[node name="Button4" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer2/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "COMBINE"
+
+[node name="Button5" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer2/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "EXAMINE"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/GridContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Points"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer2/GridContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "INVENTORY"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "HINT"
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "TEXT"
+
+[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "TRAVEL"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "LOOK
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "GET"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "MOVE
+"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "OPEN
+"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "TALK"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "ON OFF"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.54
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "AUXILIARY PANEL"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Who are you?! What do you want?"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "▲"
+
+[node name="Button2" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "A"
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "▼"
+
+[node name="Button2" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "B"
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.05
+text = "?"
+
+[node name="Button2" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_0m8r1")
+text = "C"
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
