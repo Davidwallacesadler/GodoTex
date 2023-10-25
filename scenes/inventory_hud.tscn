@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpo62q7rdehom"]
+
+[ext_resource type="Script" path="res://scripts/inventory_hud.gd" id="1_dvux0"]
+[ext_resource type="FontFile" uid="uid://b033ll5eisqa4" path="res://assets/fonts/tex_ui_bold.ttf" id="1_u1q5j"]
+[ext_resource type="Resource" uid="uid://u48gwaetfxe2" path="res://resources/items/credit_card_application.tres" id="2_lhvwl"]
+[ext_resource type="Resource" uid="uid://yaj700b76n8" path="res://resources/items/pen.tres" id="3_d550j"]
+[ext_resource type="Resource" uid="uid://cbyguww2d64r" path="res://resources/items/sales_flyer.tres" id="4_yf0g1"]
+
+[node name="InventoryHud" type="VBoxContainer" node_paths=PackedStringArray("_item_list", "_up_button", "_down_button", "_use_button", "_combine_button", "_examine_button", "_thumbnail_texture")]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -230.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("1_dvux0")
+_items = Array[Resource("res://scripts/inventory_item.gd")]([ExtResource("2_lhvwl"), ExtResource("3_d550j"), ExtResource("4_yf0g1")])
+_item_list = NodePath("InventoryList")
+_up_button = NodePath("InventoryDetailsGrid/DetailsGridRight/InventoryUpButton")
+_down_button = NodePath("InventoryDetailsGrid/DetailsGridRight/InventoryDownButton")
+_use_button = NodePath("InventoryDetailsGrid/DetailsGridRight/UseButton")
+_combine_button = NodePath("InventoryDetailsGrid/DetailsGridRight/CombineButton")
+_examine_button = NodePath("InventoryDetailsGrid/DetailsGridRight/ExamineButton")
+_thumbnail_texture = NodePath("InventoryDetailsGrid/DetailsGridLeft/InventoryItemTextureRect")
+
+[node name="InventoryList" type="ItemList" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InventoryDetailsGrid" type="GridContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="DetailsGridRight" type="VBoxContainer" parent="InventoryDetailsGrid"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InventoryUpButton" type="Button" parent="InventoryDetailsGrid/DetailsGridRight"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "▲"
+
+[node name="InventoryDownButton" type="Button" parent="InventoryDetailsGrid/DetailsGridRight"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "▼"
+
+[node name="UseButton" type="Button" parent="InventoryDetailsGrid/DetailsGridRight"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_u1q5j")
+text = "USE"
+
+[node name="CombineButton" type="Button" parent="InventoryDetailsGrid/DetailsGridRight"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_u1q5j")
+text = "COMBINE"
+
+[node name="ExamineButton" type="Button" parent="InventoryDetailsGrid/DetailsGridRight"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_u1q5j")
+text = "EXAMINE"
+
+[node name="DetailsGridLeft" type="VBoxContainer" parent="InventoryDetailsGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PointsLabel" type="Label" parent="InventoryDetailsGrid/DetailsGridLeft"]
+layout_mode = 2
+text = "Points 0"
+horizontal_alignment = 1
+
+[node name="InventoryButton" type="Button" parent="InventoryDetailsGrid/DetailsGridLeft"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_u1q5j")
+text = "INVENTORY"
+
+[node name="InventoryItemTextureRect" type="TextureRect" parent="InventoryDetailsGrid/DetailsGridLeft"]
+layout_mode = 2
+
+[node name="MiscActionsContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HintButton" type="Button" parent="MiscActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_u1q5j")
+text = "HINT"
+
+[node name="TextButton" type="Button" parent="MiscActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_u1q5j")
+text = "TEXT"
+
+[node name="TravelButton" type="Button" parent="MiscActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_u1q5j")
+text = "TRAVEL"

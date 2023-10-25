@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://yaj700b76n8"]
 
 [ext_resource type="Script" path="res://scripts/inventory_item.gd" id="1_pg0ev"]
-[ext_resource type="Texture2D" uid="uid://b4dcbitvqfe22" path="res://assets/textures/icon.svg" id="2_uxv3k"]
+[ext_resource type="Texture2D" uid="uid://dbd015dhud4l6" path="res://assets/textures/items/pen_th.png" id="2_xcums"]
 
 [resource]
 script = ExtResource("1_pg0ev")
-name = ""
+name = "Pen"
 description = ""
-combinesWith = []
-thumbnailImage = ExtResource("2_uxv3k")
+combines_with = Array[ExtResource("1_pg0ev")]([])
+thumbnail_image = ExtResource("2_xcums")

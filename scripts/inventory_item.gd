@@ -3,6 +3,6 @@ extends Resource
 
 @export var name: String = ""
 @export var description: String = ""
-@export var combinesWith: Array = []
-@export var thumbnailImage: Texture = preload("res://assets/textures/icon.svg")
-@export var examinationScene: Resource
+@export var combines_with: Array[InventoryItem] = []
+@export var thumbnail_image: Texture = preload("res://assets/textures/icon.svg")
+@export var examination_scene: Resource

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://3wbjem6eeiex"]
+[gd_scene load_steps=4 format=3 uid="uid://3wbjem6eeiex"]
 
-[ext_resource type="PackedScene" uid="uid://dd1qy06qjmp64" path="res://scenes/tex_office.tscn" id="1_0dhyh"]
-[ext_resource type="FontFile" uid="uid://b033ll5eisqa4" path="res://assets/fonts/tex_ui_bold.ttf" id="1_1n0cu"]
+[ext_resource type="PackedScene" uid="uid://dd1qy06qjmp64" path="res://scenes/tex_office.tscn" id="1_svmp2"]
+[ext_resource type="PackedScene" uid="uid://dpo62q7rdehom" path="res://scenes/inventory_hud.tscn" id="2_wamjm"]
+[ext_resource type="FontFile" uid="uid://b033ll5eisqa4" path="res://assets/fonts/tex_ui_bold.ttf" id="3_yf4e4"]
 
 [node name="MainUI" type="Control"]
 layout_mode = 3
@@ -32,94 +33,13 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="MainContainer/TopHalfContainer/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(918, 434)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 
-[node name="tex_office" parent="MainContainer/TopHalfContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_0dhyh")]
+[node name="tex_office" parent="MainContainer/TopHalfContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_svmp2")]
 
-[node name="RightControlsContainer" type="VBoxContainer" parent="MainContainer/TopHalfContainer"]
+[node name="RightControlsContainer" parent="MainContainer/TopHalfContainer" instance=ExtResource("2_wamjm")]
 layout_mode = 2
-
-[node name="InventoryList" type="ItemList" parent="MainContainer/TopHalfContainer/RightControlsContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="InventoryDetailsGrid" type="GridContainer" parent="MainContainer/TopHalfContainer/RightControlsContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-columns = 2
-
-[node name="DetailsGridRight" type="VBoxContainer" parent="MainContainer/TopHalfContainer/RightControlsContainer/InventoryDetailsGrid"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="InventoryUpButton" type="Button" parent="MainContainer/TopHalfContainer/RightControlsContainer/InventoryDetailsGrid/DetailsGridRight"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "▲"
-
-[node name="InventoryDownButton" type="Button" parent="MainContainer/TopHalfContainer/RightControlsContainer/InventoryDetailsGrid/DetailsGridRight"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "▼"
-
-[node name="UseButton" type="Button" parent="MainContainer/TopHalfContainer/RightControlsContainer/InventoryDetailsGrid/DetailsGridRight"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("1_1n0cu")
-text = "USE"
-
-[node name="CombineButton" type="Button" parent="MainContainer/TopHalfContainer/RightControlsContainer/InventoryDetailsGrid/DetailsGridRight"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("1_1n0cu")
-text = "COMBINE"
-
-[node name="ExamineButton" type="Button" parent="MainContainer/TopHalfContainer/RightControlsContainer/InventoryDetailsGrid/DetailsGridRight"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("1_1n0cu")
-text = "EXAMINE"
-
-[node name="DetailsGridLeft" type="VBoxContainer" parent="MainContainer/TopHalfContainer/RightControlsContainer/InventoryDetailsGrid"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="PointsLabel" type="Label" parent="MainContainer/TopHalfContainer/RightControlsContainer/InventoryDetailsGrid/DetailsGridLeft"]
-layout_mode = 2
-text = "Points 0"
-horizontal_alignment = 1
-
-[node name="InventoryButton" type="Button" parent="MainContainer/TopHalfContainer/RightControlsContainer/InventoryDetailsGrid/DetailsGridLeft"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_1n0cu")
-text = "INVENTORY"
-
-[node name="InventoryItemTextureRect" type="TextureRect" parent="MainContainer/TopHalfContainer/RightControlsContainer/InventoryDetailsGrid/DetailsGridLeft"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="MiscActionsContainer" type="HBoxContainer" parent="MainContainer/TopHalfContainer/RightControlsContainer"]
-layout_mode = 2
-
-[node name="HintButton" type="Button" parent="MainContainer/TopHalfContainer/RightControlsContainer/MiscActionsContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("1_1n0cu")
-text = "HINT"
-
-[node name="TextButton" type="Button" parent="MainContainer/TopHalfContainer/RightControlsContainer/MiscActionsContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("1_1n0cu")
-text = "TEXT"
-
-[node name="TravelButton" type="Button" parent="MainContainer/TopHalfContainer/RightControlsContainer/MiscActionsContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("1_1n0cu")
-text = "TRAVEL"
 
 [node name="MiddleContainer" type="HBoxContainer" parent="MainContainer"]
 layout_mode = 2
@@ -127,7 +47,7 @@ layout_mode = 2
 [node name="LookLabel" type="Label" parent="MainContainer/MiddleContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("1_1n0cu")
+theme_override_fonts/font = ExtResource("3_yf4e4")
 text = "LOOK
 "
 horizontal_alignment = 1
@@ -135,14 +55,14 @@ horizontal_alignment = 1
 [node name="GetLabel" type="Label" parent="MainContainer/MiddleContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("1_1n0cu")
+theme_override_fonts/font = ExtResource("3_yf4e4")
 text = "GET"
 horizontal_alignment = 1
 
 [node name="MoveLabel" type="Label" parent="MainContainer/MiddleContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("1_1n0cu")
+theme_override_fonts/font = ExtResource("3_yf4e4")
 text = "MOVE
 "
 horizontal_alignment = 1
@@ -150,7 +70,7 @@ horizontal_alignment = 1
 [node name="OpenLabel" type="Label" parent="MainContainer/MiddleContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("1_1n0cu")
+theme_override_fonts/font = ExtResource("3_yf4e4")
 text = "OPEN
 "
 horizontal_alignment = 1
@@ -158,21 +78,21 @@ horizontal_alignment = 1
 [node name="TalkLabel" type="Label" parent="MainContainer/MiddleContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("1_1n0cu")
+theme_override_fonts/font = ExtResource("3_yf4e4")
 text = "TALK"
 horizontal_alignment = 1
 
 [node name="OnOffLabel" type="Label" parent="MainContainer/MiddleContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("1_1n0cu")
+theme_override_fonts/font = ExtResource("3_yf4e4")
 text = "ON OFF"
 horizontal_alignment = 1
 
 [node name="AuxPanelButton" type="Button" parent="MainContainer/MiddleContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("1_1n0cu")
+theme_override_fonts/font = ExtResource("3_yf4e4")
 text = "AUXILIARY PANEL"
 
 [node name="BottomHalfContainer" type="VBoxContainer" parent="MainContainer"]
@@ -203,7 +123,7 @@ text = "▲"
 
 [node name="Button2" type="Button" parent="MainContainer/BottomHalfContainer/BottomRow/DialogOptionsContainer/RowA"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_1n0cu")
+theme_override_fonts/font = ExtResource("3_yf4e4")
 text = "A"
 
 [node name="Label" type="Label" parent="MainContainer/BottomHalfContainer/BottomRow/DialogOptionsContainer/RowA"]
@@ -220,7 +140,7 @@ text = "▼"
 
 [node name="Button2" type="Button" parent="MainContainer/BottomHalfContainer/BottomRow/DialogOptionsContainer/HBoxContainer2"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_1n0cu")
+theme_override_fonts/font = ExtResource("3_yf4e4")
 text = "B"
 
 [node name="Label" type="Label" parent="MainContainer/BottomHalfContainer/BottomRow/DialogOptionsContainer/HBoxContainer2"]
@@ -238,7 +158,7 @@ text = "?"
 
 [node name="Button2" type="Button" parent="MainContainer/BottomHalfContainer/BottomRow/DialogOptionsContainer/HBoxContainer3"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_1n0cu")
+theme_override_fonts/font = ExtResource("3_yf4e4")
 text = "C"
 
 [node name="Label" type="Label" parent="MainContainer/BottomHalfContainer/BottomRow/DialogOptionsContainer/HBoxContainer3"]
