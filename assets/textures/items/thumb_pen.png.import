@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbd015dhud4l6"
-path="res://.godot/imported/pen_th.png-af510644bdef0bc266a96576dc53f6ce.ctex"
+path="res://.godot/imported/thumb_pen.png-8e1d1b45ab90b59585c59c2f32f4ff8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/items/pen_th.png"
-dest_files=["res://.godot/imported/pen_th.png-af510644bdef0bc266a96576dc53f6ce.ctex"]
+source_file="res://assets/textures/items/thumb_pen.png"
+dest_files=["res://.godot/imported/thumb_pen.png-8e1d1b45ab90b59585c59c2f32f4ff8a.ctex"]
 
 [params]
 

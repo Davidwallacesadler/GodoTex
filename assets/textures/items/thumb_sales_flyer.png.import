@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj7coxo47yfvy"
-path="res://.godot/imported/cc_app_th.png-e4d79efdeddf5677e745261e369b9915.ctex"
+uid="uid://cwyd7hmbkvhl4"
+path="res://.godot/imported/thumb_sales_flyer.png-a5b274b486b9b2db8916b3596fb5586b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/items/cc_app_th.png"
-dest_files=["res://.godot/imported/cc_app_th.png-e4d79efdeddf5677e745261e369b9915.ctex"]
+source_file="res://assets/textures/items/thumb_sales_flyer.png"
+dest_files=["res://.godot/imported/thumb_sales_flyer.png-a5b274b486b9b2db8916b3596fb5586b.ctex"]
 
 [params]
 

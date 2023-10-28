@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Quip" load_steps=2 format=3 uid="uid://5quvmd754lfg"]
+
+[ext_resource type="Script" path="res://scripts/quip.gd" id="1_swvev"]
+
+[resource]
+script = ExtResource("1_swvev")
+transcription = ""

@@ -16,7 +16,6 @@ var _selected_item: InventoryItem
 func _ready():
 	_setup_item_list()
 	_examine_button.pressed.connect(_on_examine_button_clicked)
-	
 
 func _setup_item_list():
 	for item in _items:
