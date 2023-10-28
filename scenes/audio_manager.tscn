@@ -8,4 +8,5 @@ script = ExtResource("1_1x04q")
 [node name="SoundEffectAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-autoplay = true
+
+[node name="QuipAudioStreamPlayer" type="AudioStreamPlayer" parent="."]

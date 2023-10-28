@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj6vanpn3m78"]
+[gd_scene load_steps=6 format=3 uid="uid://bj6vanpn3m78"]
 
 [ext_resource type="Script" path="res://scripts/world_item.gd" id="1_kuuap"]
 [ext_resource type="Resource" uid="uid://u48gwaetfxe2" path="res://resources/items/credit_card_application.tres" id="2_lpncx"]
 [ext_resource type="PackedScene" uid="uid://baef74pd1ltd" path="res://assets/models/test_model.dae" id="3_5i182"]
+[ext_resource type="Resource" uid="uid://5quvmd754lfg" path="res://resources/quips/credit_card_application.tres" id="3_rycjm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ujg0y"]
 
@@ -11,6 +12,7 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_kuuap")
 inventory_item = ExtResource("2_lpncx")
+quip = ExtResource("3_rycjm")
 
 [node name="test_model" parent="." instance=ExtResource("3_5i182")]
 transform = Transform3D(0.494906, 0, 0, 0, 0.455083, 0, 0, 0, 0.721714, 0, 0, 0)

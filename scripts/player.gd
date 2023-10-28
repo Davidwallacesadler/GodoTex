@@ -38,6 +38,7 @@ func _physics_process(delta):
 func _input(event):
 	_aim(event)
 	_handle_mouse_escape(event)
+	_handle_ivestigation(event)
 
 
 func _aim(event: InputEvent):
@@ -54,10 +55,15 @@ func _aim(event: InputEvent):
 func _handle_mouse_escape(event: InputEvent):
 	if event.is_action_pressed("ui_accept"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		
 
+func _handle_ivestigation(event: InputEvent):
+	if event.is_action_pressed("ui_select") and focused_world_item:
+		GameEvents.item_investigated.emit(focused_world_item.quip)
 
 func _process_interaction_raycast():
 	var collision_object = $Camera/InteractionRayCast.get_collider()
-	if collision_object is WorldItem:
-		print("player is looking at", collision_object.name)
+	if collision_object as WorldItem:
+		focused_world_item = collision_object
+		print("player is looking at: ", collision_object.name)
 		
