@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://31mycxqc7vot"]
+
+[ext_resource type="ArrayMesh" uid="uid://brjuyws3rf15x" path="res://assets/models/test.obj" id="3_irtr8"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fy16u"]
+data = PackedVector3Array(-1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, 1, 1, -1, 1, -1, -1, -1, -1, -1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, -1, -1, 1, 1, -1, 1, 1, -1, -1, -1, -1, 1, -1, -1)
+
+[node name="sales_flyer" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Test" type="MeshInstance3D" parent="."]
+mesh = ExtResource("3_irtr8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_fy16u")

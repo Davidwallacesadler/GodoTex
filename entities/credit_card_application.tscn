@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bj6vanpn3m78"]
 
-[ext_resource type="Script" path="res://entities/world_item.gd" id="1_nqup3"]
+[ext_resource type="Script" path="res://scripts/world_item.gd" id="1_kuuap"]
 [ext_resource type="Resource" uid="uid://u48gwaetfxe2" path="res://resources/items/credit_card_application.tres" id="2_lpncx"]
 [ext_resource type="PackedScene" uid="uid://baef74pd1ltd" path="res://assets/models/test_model.dae" id="3_5i182"]
 
@@ -9,7 +9,7 @@
 [node name="credit_card_application" type="StaticBody3D"]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("1_nqup3")
+script = ExtResource("1_kuuap")
 inventory_item = ExtResource("2_lpncx")
 
 [node name="test_model" parent="." instance=ExtResource("3_5i182")]
