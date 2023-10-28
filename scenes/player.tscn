@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_3pg5l"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tn7iu"]
+height = 2.5
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_3pg5l")
@@ -11,7 +12,9 @@ script = ExtResource("1_3pg5l")
 shape = SubResource("CapsuleShape3D_tn7iu")
 
 [node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.587475, 0)
 current = true
+fov = 90.0
 
 [node name="InteractionRayCast" type="RayCast3D" parent="Camera"]
 target_position = Vector3(0, 0, -3)

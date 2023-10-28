@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://3wbjem6eeiex"]
+[gd_scene load_steps=5 format=3 uid="uid://3wbjem6eeiex"]
 
 [ext_resource type="PackedScene" uid="uid://dd1qy06qjmp64" path="res://scenes/tex_office.tscn" id="1_svmp2"]
 [ext_resource type="PackedScene" uid="uid://dpo62q7rdehom" path="res://scenes/inventory_hud.tscn" id="2_wamjm"]
 [ext_resource type="FontFile" uid="uid://b033ll5eisqa4" path="res://assets/fonts/tex_ui_bold.ttf" id="3_yf4e4"]
+[ext_resource type="Script" path="res://scripts/dialog_text_label.gd" id="4_onbgt"]
 
 [node name="MainUI" type="Control"]
 layout_mode = 3
@@ -33,7 +34,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="MainContainer/TopHalfContainer/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(918, 434)
 render_target_update_mode = 4
 
 [node name="tex_office" parent="MainContainer/TopHalfContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_svmp2")]
@@ -103,10 +104,11 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="DialogTextLabel" type="RichTextLabel" parent="MainContainer/BottomHalfContainer/BottomRow"]
+[node name="DialogTextLabel" type="Label" parent="MainContainer/BottomHalfContainer/BottomRow"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_onbgt")
 
 [node name="DialogOptionsContainer" type="VBoxContainer" parent="MainContainer/BottomHalfContainer/BottomRow"]
 layout_mode = 2

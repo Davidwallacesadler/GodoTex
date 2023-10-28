@@ -6,24 +6,15 @@ const JUMP_VELOCITY = 4.5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-var focused_world_item: WorldItem
-
-
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-
-func _process(delta):
-	_process_interaction_raycast()
-
+	
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
@@ -55,15 +46,10 @@ func _aim(event: InputEvent):
 func _handle_mouse_escape(event: InputEvent):
 	if event.is_action_pressed("ui_accept"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		
+
 
 func _handle_ivestigation(event: InputEvent):
-	if event.is_action_pressed("ui_select") and focused_world_item:
-		GameEvents.item_investigated.emit(focused_world_item.quip)
-
-func _process_interaction_raycast():
-	var collision_object = $Camera/InteractionRayCast.get_collider()
-	if collision_object as WorldItem:
-		focused_world_item = collision_object
-		print("player is looking at: ", collision_object.name)
-		
+	if event.is_action_pressed("ui_select"):
+		var focused_object = $Camera/InteractionRayCast.get_collider()
+		if focused_object as WorldItem:
+			GameEvents.item_investigated.emit(focused_object.quip)

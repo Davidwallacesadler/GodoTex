@@ -4,7 +4,6 @@ extends Node
 @export var music: AudioStream
 @export var sound_effect: AudioStream
 
-var _is_playing_quip := false
 var _music_decrease_amount := 5.0
 
 func _ready():
@@ -27,11 +26,11 @@ func _play_quip(quip: Quip):
 	$MusicAudioStreamPlayer.volume_db = -_music_decrease_amount
 	$QuipAudioStreamPlayer.stream = quip.audio
 	$QuipAudioStreamPlayer.play()
-#	_is_playing_quip = true
 	
 
 func _on_quip_finished():
 	$MusicAudioStreamPlayer.volume_db = 0
+	GameEvents.quip_finished_playing.emit()
 	
 
 func _on_item_investigated(quip: Quip):

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Quip" load_steps=3 format=3 uid="uid://5quvmd754lfg"]
 
-[ext_resource type="AudioStream" uid="uid://dd05cnxj2sssq" path="res://assets/music/daily_intro_theme.mp3" id="1_78j2v"]
+[ext_resource type="AudioStream" uid="uid://bf3u5se58e2f6" path="res://assets/sound_effects/mail.mp3" id="1_j8lh4"]
 [ext_resource type="Script" path="res://scripts/quip.gd" id="1_swvev"]
 
 [resource]
 script = ExtResource("1_swvev")
-audio = ExtResource("1_78j2v")
-transcription = ""
+audio = ExtResource("1_j8lh4")
+transcription = "Oh boy! Mail!"
