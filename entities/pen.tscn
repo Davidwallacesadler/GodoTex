@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://co3wcfc1syyhg"]
+
+[ext_resource type="Script" path="res://scripts/world_item.gd" id="1_8ycf4"]
+
+[node name="Pen" type="StaticBody3D"]
+script = ExtResource("1_8ycf4")
