@@ -56,11 +56,8 @@ func _handle_ivestigation(event: InputEvent):
 
 
 func _interact(world_item: WorldItem):
-	if world_item.has_been_investigated:
-		if world_item.inventory_item:
-			GameEvents.item_picked_up.emit(world_item.inventory_item)
-			world_item.has_been_picked_up = true
-			world_item.visible = false
-	else:
-		world_item.has_been_investigated = true
-		GameEvents.item_investigated.emit(world_item.quip)
+	match world_item.current_action:
+		WorldItem.Action.INVESTIGATE:
+			world_item.on_player_investigated()
+		WorldItem.Action.PICK_UP:
+			world_item.on_player_pick_up()
