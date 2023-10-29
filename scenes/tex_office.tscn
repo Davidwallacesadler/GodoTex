@@ -33,10 +33,10 @@ mesh = SubResource("PlaneMesh_fuvuw")
 shape = SubResource("ConcavePolygonShape3D_c10cs")
 
 [node name="CreditCardApplication" parent="." instance=ExtResource("1_uwp72")]
-transform = Transform3D(0.872411, 0.488774, 2.1365e-08, 0, -4.37114e-08, 1, 0.488774, -0.872411, -3.81343e-08, 0.3111, 0.0899621, -3.04271)
+transform = Transform3D(0.872411, 0.488774, 2.1365e-08, 0, -4.37114e-08, 1, 0.488774, -0.872411, -3.81343e-08, 0.3111, 0.00234113, -3.04271)
 
 [node name="sales_flyer" parent="." instance=ExtResource("3_rht67")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55109, -0.00901508, -3.05557)
+transform = Transform3D(0.46, 0, 0, 0, 0.46, 0, 0, 0, 0.46, -0.963595, -0.00901508, -3.05557)
 
 [node name="AudioManager" parent="." instance=ExtResource("4_8q1pc")]
 music = ExtResource("5_lv61q")

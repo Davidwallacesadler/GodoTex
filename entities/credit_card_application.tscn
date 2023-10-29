@@ -18,5 +18,4 @@ quip = ExtResource("3_rycjm")
 transform = Transform3D(0.494906, 0, 0, 0, 0.455083, 0, 0, 0, 0.721714, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-visible = false
 shape = SubResource("BoxShape3D_ujg0y")
