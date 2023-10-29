@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://31mycxqc7vot"]
+[gd_scene load_steps=6 format=3 uid="uid://31mycxqc7vot"]
 
 [ext_resource type="Script" path="res://scripts/world_item.gd" id="1_o2yee"]
 [ext_resource type="Resource" uid="uid://5quvmd754lfg" path="res://resources/quips/credit_card_application.tres" id="2_itox3"]
+[ext_resource type="Resource" uid="uid://cbyguww2d64r" path="res://resources/items/sales_flyer.tres" id="2_iu44p"]
 [ext_resource type="ArrayMesh" uid="uid://brjuyws3rf15x" path="res://assets/models/test.obj" id="3_irtr8"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fy16u"]
@@ -11,6 +12,7 @@ data = PackedVector3Array(-1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_o2yee")
+inventory_item = ExtResource("2_iu44p")
 quip = ExtResource("2_itox3")
 
 [node name="Test" type="MeshInstance3D" parent="."]

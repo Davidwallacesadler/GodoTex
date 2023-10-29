@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="GameState" load_steps=2 format=3 uid="uid://ccsu435o8p6md"]
+
+[ext_resource type="Script" path="res://scripts/game_state.gd" id="1_uxwdx"]
+
+[resource]
+script = ExtResource("1_uxwdx")
+player_inventory = Array[Resource("res://scripts/inventory_item.gd")]([])

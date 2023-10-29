@@ -15,7 +15,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	# Get the input direction and handle the movement/deceleration.
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
@@ -44,12 +44,23 @@ func _aim(event: InputEvent):
 
 
 func _handle_mouse_escape(event: InputEvent):
-	if event.is_action_pressed("ui_accept"):
+	if event.is_action_pressed("escape"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 
 func _handle_ivestigation(event: InputEvent):
-	if event.is_action_pressed("ui_select"):
+	if event.is_action_pressed("interact"):
 		var focused_object = $Camera/InteractionRayCast.get_collider()
 		if focused_object as WorldItem:
-			GameEvents.item_investigated.emit(focused_object.quip)
+			_interact(focused_object)
+
+
+func _interact(world_item: WorldItem):
+	if world_item.has_been_investigated:
+		if world_item.inventory_item:
+			GameEvents.item_picked_up.emit(world_item.inventory_item)
+			world_item.has_been_picked_up = true
+			world_item.visible = false
+	else:
+		world_item.has_been_investigated = true
+		GameEvents.item_investigated.emit(world_item.quip)
